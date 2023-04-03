@@ -12,7 +12,7 @@ export default class BootScene extends Phaser.Scene {
       el.type === 'image' && this.load.image(el.key, el.url)
       el.type === 'font' && this.load.bitmapFont(el.key, el.url.png, el.url.xml)
       el.type === 'spritesheet' && this.load.spritesheet(el.key, el.url, el.config)
-      el.type === 'base64' && this.textures.addBase64(el.key, el.base64)
+      el.type === 'base64' && this.textures.addBase64(el.key, el.url)
     })
   }
 

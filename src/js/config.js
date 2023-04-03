@@ -1,26 +1,34 @@
+import {phone, exit, wall, fire, wallVertical} from "../assets/imagesBase64"
+
 export const RESOURCES = [
   {
-    key: 'bg',
+    key: 'exit',
     type: 'base64',
-    base64: require('../assets/bg.json'),
+    url: exit
   },
 
   {
     key: 'wallVertical',
     type: 'base64',
-    base64: require('../assets/wallVertical.json'),
+    url: wallVertical
   },
 
   {
     key: 'fire',
     type: 'base64',
-    base64: require('../assets/fire.json'),
+    url: fire
   },
 
   {
     key: 'wall',
     type: 'base64',
-    base64: require('../assets/wall.json'),
+    url: wall
+  },
+
+  {
+    key: 'phone',
+    type: 'base64',
+    url: phone
   },
 
   {

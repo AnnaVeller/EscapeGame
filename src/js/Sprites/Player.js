@@ -1,17 +1,28 @@
+import {GAME_DEFAULT_SIZE} from "../../index"
+
 export default class Player {
   constructor(game, config) {
     this.game = game
     this.config = config
 
-    this.speed = 200
+    this.speed = 300
 
-    this.content = this.game.physics.add.sprite(450, 445, 'player')
+    this.content = this.game.physics.add.sprite(GAME_DEFAULT_SIZE / 2, 440, 'player')
     this.content.setScale(0.8)
 
     // this.player.setBounce(0.2)
     // this.player.setCollideWorldBounds(true)
     this.animationsCreate()
+  }
 
+  hide() {
+    this.game.tweens.add({
+      targets: this.content,
+      scaleX: 0,
+      scaleY: 0,
+      duration: 200,
+      ease: 'Sine.easeInOut'
+    })
   }
 
   animationsCreate() {
@@ -33,7 +44,6 @@ export default class Player {
       frameRate: 10,
       repeat: -1
     })
-
 
     // this.content.play('left')
     // this.content.anims.play('left')
