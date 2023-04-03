@@ -1,26 +1,26 @@
 export const RESOURCES = [
   {
     key: 'bg',
-    type: 'image',
-    url: require('../assets/bg.jpg'),
-  },
-
-  {
-    key: 'wall',
-    type: 'image',
-    url: require('../assets/wallDebug.png'),
+    type: 'base64',
+    base64: require('../assets/bg.json'),
   },
 
   {
     key: 'wallVertical',
-    type: 'image',
-    url: require('../assets/wallVerticalDebug.png'),
+    type: 'base64',
+    base64: require('../assets/wallVertical.json'),
   },
 
   {
     key: 'fire',
-    type: 'image',
-    url: require('../assets/fire.png'),
+    type: 'base64',
+    base64: require('../assets/fire.json'),
+  },
+
+  {
+    key: 'wall',
+    type: 'base64',
+    base64: require('../assets/wall.json'),
   },
 
   {

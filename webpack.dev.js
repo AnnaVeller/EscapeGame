@@ -5,15 +5,9 @@ const {CleanWebpackPlugin} = require("clean-webpack-plugin")
 
 module.exports = {
   mode: "development",
+  entry: './src/index.js',
   module: {
     rules: [
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   use: {
-      //     loader: "babel-loader"
-      //   }
-      // },
       {
         test: [/\.vert$/, /\.frag$/],
         use: "raw-loader"

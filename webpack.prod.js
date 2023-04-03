@@ -12,15 +12,27 @@ module.exports = merge(base, {
     maxEntrypointSize: 900000,
     maxAssetSize: 900000
   },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+    ]
+  },
   optimization: {
-    // minimizer: [
-    //   new TerserPlugin({
-    //     terserOptions: {
-    //       output: {
-    //         comments: false
-    //       }
-    //     }
-    //   })
-    // ]
-  }
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({ // Use TerserPlugin as a minifier
+        terserOptions: {
+          compress: {    // Preserve directives
+            directives: false,
+          },
+        },
+      }),
+    ],
+  },
 })
