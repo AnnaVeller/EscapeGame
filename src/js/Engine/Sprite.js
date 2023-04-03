@@ -18,11 +18,32 @@ export default class Sprite {
     if (this.config.interactive) {
       this.content.setInteractive()
     }
+
+    if (this.config.devMode) {
+      this.turnOnDebug()
+    }
   }
 
   // изменяет скейл сохраняя знаки
   changeScale(valueX, valueY = valueX) {
     this.content.setScale(Math.sign(this.content.scaleX) * valueX, Math.sign(this.content.scaleY) * valueY)
+  }
+
+  turnOnDebug() {
+    this.content.setInteractive()
+    this.game.input.setDraggable(this.content)
+
+    this.game.input.on('dragstart', function (pointer, gameObject) {
+      gameObject.setTint(0xff0000)
+    })
+    this.game.input.on('drag', function (pointer, gameObject, dragX, dragY) {
+      gameObject.x = dragX
+      gameObject.y = dragY
+    })
+    this.game.input.on('dragend', function (pointer, gameObject) {
+      gameObject.clearTint()
+      console.log(`x: ${Math.round(gameObject.x)}, y: ${Math.round(gameObject.y)}`)
+    })
   }
 
   getObject(config) {
