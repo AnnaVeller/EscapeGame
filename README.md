@@ -1,4 +1,5 @@
-# [Escape](https://annaveller.github.io/Escape/)
+# [Escape Game](https://annaveller.github.io/EscapeGame/)
+
 
 #### Необходимо выбраться из здания в случае пожара
 
