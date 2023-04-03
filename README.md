@@ -1,5 +1,12 @@
-# [Escape Game](https://annaveller.github.io/Escape/)
+# [Escape](https://annaveller.github.io/Escape/)
 
+#### Необходимо выбраться из здания в случае пожара
+
+1. Найти огнетушитель
+2. Позвонить пожарным
+3. Покинуть здание
+
+Управление - стрелочки на клавиатуре
 
 ### Commands
 
