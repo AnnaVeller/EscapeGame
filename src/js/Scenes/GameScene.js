@@ -61,9 +61,10 @@ export default class GameScene extends Phaser.Scene {
     this.resize(this.scale.gameSize)
   }
 
-
   update() {
     if (this.state === STATE.win) return
+
+    this.player.update()
 
     const {left, right, up, down} = this.cursors
 
@@ -76,7 +77,7 @@ export default class GameScene extends Phaser.Scene {
     } else if (up.isDown) {
       this.player.goUp()
     } else {
-      this.player.stopMoving()
+      // this.player.stopMoving()
     }
   }
 
