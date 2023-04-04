@@ -1,4 +1,4 @@
-import {phone, exit, wall, fire, wallVertical} from "../assets/imagesBase64"
+import {phone, exit, wall, fire, wallVertical, player} from "../assets/imagesBase64"
 
 export const RESOURCES = [
   {
@@ -33,8 +33,7 @@ export const RESOURCES = [
 
   {
     key: 'player',
-    type: 'spritesheet',
-    url: require('../assets/player.png'),
-    config: {frameWidth: 32, frameHeight: 48}
+    type: 'base64',
+    url: player
   },
 ]

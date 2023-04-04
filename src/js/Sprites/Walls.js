@@ -17,7 +17,6 @@ export default class Walls {
   turnOnDebug() {
     this.walls.children.entries.forEach(wall => {
       if (IS_DEBUG) {
-        // wall.id = el.id
         wall.setInteractive()
         this.game.input.setDraggable(wall)
       }

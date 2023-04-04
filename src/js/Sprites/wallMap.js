@@ -1,4 +1,4 @@
-export const IS_DEBUG = true
+export const IS_DEBUG = false
 
 export const WALL_MAP = [
   // вокруг поля рамки

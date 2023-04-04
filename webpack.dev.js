@@ -2,6 +2,7 @@ const webpack = require("webpack")
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const {CleanWebpackPlugin} = require("clean-webpack-plugin")
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 
 module.exports = {
   mode: "development",
@@ -27,7 +28,10 @@ module.exports = {
       WEBGL_RENDERER: JSON.stringify(true)
     }),
     new HtmlWebpackPlugin({
-      template: "./index.html"
-    })
+      template: "./index.html",
+      // создает index.js with the <script> injected.
+      inlineSource: '.(js|css)$' // embed all javascript and css inline
+    }),
+    new HtmlWebpackInlineSourcePlugin()
   ],
 }
